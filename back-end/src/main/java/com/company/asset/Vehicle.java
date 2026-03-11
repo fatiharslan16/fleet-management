@@ -1,35 +1,32 @@
 package com.company.asset;
 
-
-
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Asset{
+public class Vehicle{
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String assetId;
-    private String name;
-    private String category;
+    private String vehicleId;
     private String status;
+    private Integer odometer;
+    private String usageUnit;
+    private final Double initialCost;
+    private double accumulatedCost;
+    private Boolean retireCondition;
+    // private Date dateAdded;
 
-    public Asset() {} // if you never add any constructor, java provides one, otherwise you need to
-
-    public Asset(String assetId, String name) {
-        this.assetId = assetId;
-        this.name = name;
+    public Vehicle() {
+        initialCost = 0.0;
     }
 
-    public String getAssetId() { return assetId; }
-    public void setAssetId(String assetId) { this.assetId = assetId; }
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }    
+    public Vehicle(String vehicleId, Double initialCost) {
+        this.vehicleId = vehicleId;
+        this.initialCost = initialCost;
+    }
 
 
 }
