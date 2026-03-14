@@ -23,27 +23,15 @@ Spring assigns it to that reference automatically.
 public class MenuRunner implements CommandLineRunner{
 
     private final Scanner scanner = new Scanner(System.in);
-    private final AssetRepository assetRepository;
+    private final VehicleRepository vehicleRepository;
 
-    public MenuRunner(AssetRepository assetRepository){
-        this.assetRepository = assetRepository;
+    public MenuRunner(VehicleRepository vehicleRepository){
+        this.vehicleRepository = vehicleRepository;
     }
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("Enter asset name:");
-        String assetName = scanner.nextLine();
         
-        Asset asset = new Asset();
-        asset.setName(assetName);
-        
-        assetRepository.save(asset);
-        System.out.println("Asset saved with ID: " + asset.getAssetId());
-
-        System.out.println("Enter asset id:");
-        Long assetId = scanner.nextLong();
-        
-        System.out.println("Asset ID is:" + assetRepository.findById(assetId));
 
     }
 
