@@ -28,11 +28,4 @@ public class Vehicle{
         this.initialCost = initialCost;
     }
 
-
 }
-
-
-
-
-// encapsulation: class variables and attributes are private
-// public getter and setter tu update private variables
