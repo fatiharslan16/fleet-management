@@ -7,9 +7,9 @@ import org.springframework.data.repository.Repository;
 // access modifiers control where the interface can be used
 // public -> usable from any package in the application
 // default -> only inside the same package
-public interface AssetRepository extends Repository<Asset , Long>{ 
+public interface VehicleRepository extends Repository<Vehicle , Long>{ 
 
-    Asset save(Asset asset);
-    Optional<Asset> findById(long id);
+    VehicleRepository save(Vehicle asset);
+    Optional<VehicleRepository> findById(long id);
     
 }
