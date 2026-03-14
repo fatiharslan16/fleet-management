@@ -28,6 +28,9 @@ Vehicle represents a human-driven fleet unit.
 * initialCost
 * accumulatedCost
 * dateAdded
+* age
+* warrantyExpiration
+* currentValue
 * retireCondition
 
 ## **Relationships**
@@ -112,7 +115,7 @@ Metric represents data collected from a vehicle during operation. These measurem
 
 ## **Key Data**
 
-* metridId
+* metricId
 * vehicleId
 * metricType
 * value
