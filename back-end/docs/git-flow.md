@@ -13,7 +13,6 @@ git pull
 git checkout -b <type>/<short-name>
 ```
 
-
 ### 3. Work and commit
 
 ```
@@ -25,7 +24,6 @@ Types:
 
 ```
 feature — new functionality
-fix — bug fix
 docs — documentation changes
 refactor — code restructuring without behavior change
 test — tests added or modified
